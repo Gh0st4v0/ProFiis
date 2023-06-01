@@ -2,9 +2,9 @@
     font-family: 'Montserrat', sans-serif;
     padding: 0;
     margin: 0;
-    background-color: rgb(16, 16, 16);
     color: white;
 }
+
 
 body{
     display: flex;
@@ -12,6 +12,7 @@ body{
     align-items: center;
     justify-content: space-evenly;
     flex-direction: column;
+    background-color: rgb(37, 37, 37);
 }
 
 header{
@@ -28,10 +29,12 @@ header{
 header img{
     height: 35px;
     width: 35px;
+    filter: invert();
 }
 
 #filtros img{
     cursor: pointer;
+    filter: invert();
 }
 
 button{
@@ -42,6 +45,7 @@ button{
 button img{
     width: 30px;
     height: 30px;
+    filter: invert();
 }
 
 button:hover{
@@ -66,6 +70,7 @@ button:hover{
 
 #upperOptions img{
     cursor: pointer;
+    filter: invert();
 }
 
 #bottomPart{
@@ -116,8 +121,7 @@ aside{
 main{
     display: flex;
     flex-direction: column;
-    border-style: solid;
-    border-width: 2px;
+    border: 2px solid white;
     width: 665px;
 }
 
@@ -130,6 +134,7 @@ main{
     align-items: center;
     justify-content: space-between;
     border-style: solid;
+    border-color: white;
     border-width: 0 0 2px 0;
     padding-left: 1rem;
     padding-right: 1rem;
@@ -137,6 +142,7 @@ main{
 img{
     width: 50px;
     height: 50px;
+    filter: invert();
 }
 
 #tableFiis{
@@ -155,6 +161,12 @@ table{
     color: white;
 }
 
+td input{
+    width: 45px;
+    color: inherit;
+    background-color: inherit;
+}
+
 table thead th {
     background-color: none;
     border-top: 2px solid white;
@@ -171,10 +183,18 @@ table tbody td {
     padding: 1rem 2rem;
 }
 
+
+
+
+#opcoesSalvarDeletar{
+    display: flex;
+}
+
 td img{
     width: 30px;
     height: 30px;
     cursor: pointer;
+    filter: invert();
 }
 
 
