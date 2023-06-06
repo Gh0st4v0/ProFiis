@@ -1,0 +1,78 @@
+*{
+    color: white;
+}
+
+
+body{
+    background-color: rgb(37, 37, 37);
+}
+
+header{
+    border: 2px solid white;
+}
+
+header img{
+    filter: invert();
+}
+
+#filtros img{
+    filter: invert();
+}
+
+button{
+    background-color: inherit;
+}
+
+button img{
+    filter: invert();
+}
+
+#upperOptions img{
+    filter: invert();
+}
+
+
+aside > *{
+    border: 2px solid white;
+}
+
+main{
+    border: 2px solid white;
+}
+
+
+#fundosImobiliarios{
+    border-color: white;
+}
+img{
+    filter: invert();
+}
+
+table{
+    color: white;
+}
+
+table thead th {
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+}
+
+table tbody td {
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+}
+
+td img{
+    filter: invert();
+}
+
+table thead tr th:first-child,
+table tbody tr td:first-child {
+    border-left: 2px solid white;
+}
+
+table thead tr th:last-child,
+table tbody tr td:last-child {
+    border-right: 2px solid white;
+}
+
