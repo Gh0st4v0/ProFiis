@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ProFiis</title>
+    <link rel="stylesheet" href="./Styles/shape.css">
     <link id="pagestyle" rel="stylesheet" href="./Styles/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +15,20 @@
 </head>
 
 <body>
-
+    <div class="modal inactive">
+        <div class="modalContainer">
+            <form action="" onsubmit="Form.submit(event)">
+                <input id="nomeFundo"        type="text"       placeholder="Nome do fundo Ex: MXRF11">
+                <input id="numCotas"         type="number"     placeholder="Número de cotas Ex: 50"      step= "1">
+                <input id="cotacao"          type="number"     placeholder="Valor da cota Ex: 10.70 "   step= "0.01">
+                <input id="ultimoRendimento" type="number"     placeholder="Rendimento do fundo Ex: 0.12"    step= "0.01">
+                <div id="salvarDeletar">
+                        <button type="submit">Salvar</button>
+                        <div onclick="Modal.closeModal()">Cancelar</div>
+                </div>
+            </form>
+        </div>
+    </div>
     <!-- Header com o logo do site e as opções -->
     <header>
         <div id="title">
@@ -22,7 +36,7 @@
             <p>Uma ferramenta para controle de investimentos criada por Gustavo</p>
         </div>
         <div id="upperOptions">
-            <img onclick="PageStyles.darkMode()" src="./Images/moonIcon.png" alt="Modo escuro">
+            <img id="modoToggle" onclick="PageStyles.darkMode()" src="./Images/moonIcon.png" alt="Modo escuro">
             <img src="./Images/infoIcon.png" alt="Mais informações">
             <img src="./Images/userIcon.png" alt="Perfil do Usuário">
         </div>
@@ -32,17 +46,17 @@
     <div id="bottomPart">
         <aside>
             <!-- Visualizador do patrimonio total investido e renda total -->
-            <div id="patrimonioTotal">
+            <div>
                 <h1>Patrimonio total</h1>
-                <h2>R$3.985,42</h2>
+                <h2 id="patrimonioTotal">R$ 0,00</h2>
             </div>
-            <div id="rendimentoDoMes">
+            <div >
                 <h1>Rendimento do mês</h1>
-                <h2>R$49,64</h2>
+                <h2 id="rendimentoDoMes">R$ 0,00</h2>
             </div>
-            <div id="dividendYield">
+            <div>
                 <h1>Dividend yield</h1>
-                <h2>1,24%</h2>
+                <h2  id="dividendYield">0,00 %</h2>
             </div>
         </aside>
 
@@ -61,7 +75,7 @@
                         <img onclick="DOM.deleteAll()" src="./Images/deleteIcon.png" alt="Remover Fundo">
                     </button>
                     <button id="adicionar">
-                        <img onclick="DOM.addRow()" src="./Images/addIcon.png" alt="Adicionar Fundo">
+                        <img onclick="Modal.activateModal()" src="./Images/addIcon.png" alt="Adicionar Fundo">
                     </button>
                 </div>
             </div>
@@ -77,20 +91,6 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>MXRF11</td>
-                            <td>187</td>
-                            <td>R$ 10,66</td>
-                            <td>R$ 0,12</td>
-                            <td><img src="./Images/editIcon.png" alt="Editar Fundo"></td>
-                        </tr>
-                        <tr>
-                            <td>DEVA11</td>
-                            <td>32</td>
-                            <td>R$ 62,25</td>
-                            <td> R$ 0,85</td>
-                            <td><img src="./Images/editIcon.png" alt="Editar Fundo"></td>
-                        </tr>
                     </tbody>
                 </table>
             </div>
