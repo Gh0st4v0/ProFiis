@@ -1,215 +1,50 @@
-*{
-    font-family: 'Montserrat', sans-serif;
-    padding: 0;
-    margin: 0;
-}
-
-body{
-    display: flex;
-    align-self: center;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-direction: column;
-}
-
 header{
-    display: flex;
-    justify-content: space-between;
-    width: 911px;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    margin-bottom: 3rem;
-    margin-top: 2rem;
     border: 2px solid black;
 }
 
-header img{
-    height: 35px;
-    width: 35px;
+.modalContainer{
+    background-color: white;
+    border: 2px solid black; 
 }
 
-#filtros img{
-    cursor: pointer;
+.modalContainer form{
+    background-color: white;
 }
 
-button{
-    border: none;
-    background-color: inherit;
+.modalContainer input{
+    background-color: white;
+
 }
 
-button img{
-    width: 30px;
-    height: 30px;
+#salvarDeletar *{
+    border: 2px solid black;
 }
 
-button:hover{
-    cursor: pointer;
-}
-
-#title{
-    display: flex;
-    text-align: center;
-    align-items:center;
-    justify-content:space-evenly;
-    flex-direction: column;
-    width: 300px;
-}
-
-#upperOptions{
-    display: flex;
-    align-items: end;
-    width: 150px;
-    justify-content: space-evenly;
-}
-
-#upperOptions img{
-    cursor: pointer;
-}
-
-#bottomPart{
-    display: flex;
-    width: 911px;
-    height: 500px;
-    justify-content: space-between;
-}
-
-#title h3{
-    font-size: xxx-large;
-    font-weight: 600;
-    font-style: italic;
-    line-height: 0;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-}
 
 aside > *{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
     border: 2px solid black;
-    border-radius: 2rem;
-    border-width: 2px;
-}
-
-aside > * h1{
-    font-size: medium;
-    font-weight: 500;
-    padding-top: 1.2rem;
-    padding-bottom: 1.2rem;
-}
-aside > * h2{
-    padding-bottom: 2.4rem;
-    font-size: xx-large;
-}
-
-aside{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    width: 212px;
-}
-
-main{
-    display: flex;
-    flex-direction: column;
-    border-style: solid;
-    border-width: 2px;
-    width: 665px;
-}
-
-::-webkit-scrollbar{
-    display: none;
-}
-
-#fundosImobiliarios{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-style: solid;
-    border-width: 0 0 2px 0;
-    padding-left: 1rem;
-    padding-right: 1rem;
-}
-img{
-    width: 50px;
-    height: 50px;
-}
-
-#tableFiis{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    overflow-y:scroll;
-    overflow-x: hidden;
 }
 
 table{
-    width: 650px;
-    border-spacing: 0 0.5rem;
     color: black;
 }
 
-td input{
-    width: 40px;
-    color: inherit;
-    background-color: inherit;
-}
-
 table thead th {
-    background-color: none;
     border-top: 2px solid black;
     border-bottom: 2px solid black;
-    font-weight: normal;
-    padding: 1rem 2rem;
-
-    text-align: left;
 }
 
 table tbody td {
     border-top: 2px solid black;
     border-bottom: 2px solid black;
-    padding: 1rem 2rem;
-}
-
-
-
-
-#opcoesSalvarDeletar{
-    display: flex;
-}
-
-td img{
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-}
-
-
-table tbody tr {
-    opacity: 0.7;
-}
-
-table tbody tr:hover {
-    opacity: 1; 
-}
-
-table thead tr th{
-    font-weight: bold;
 }
 
 table thead tr th:first-child,
 table tbody tr td:first-child {
-    border-radius: 1rem 0 0 1rem;
     border-left: 2px solid black;
 }
 
 table thead tr th:last-child,
 table tbody tr td:last-child {
-    border-radius: 0 1rem 1rem 0;
     border-right: 2px solid black;
-    justify-content: center;
 }
