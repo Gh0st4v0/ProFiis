@@ -8,50 +8,42 @@ const Storage = {
     }
 }
 
+const Modal = {
+    activateModal(){
+        document
+            .querySelector('.modal')
+            .classList
+            .remove('inactive')
+    },
+
+    closeModal(){
+        document
+            .querySelector('.modal')
+            .classList
+            .add('inactive')
+    }
+}
+
 const DOM = {
     rowsContainer: document.querySelector('tbody'),
 
-    addRow() {
-        DOM.rowsContainer.innerHTML += this.innerHTMLRow()
-    },
-
     finishRow(row, index){
         const tr = document.createElement('tr')
-        tr.innerHTML = DOM.innerHTMLFinishedRow(row)
+        tr.innerHTML = DOM.innerHTMLFinishedRow(row,index)
         tr.dataset.index = index
 
         DOM.rowsContainer.appendChild(tr)
     },
 
-    innerHTMLFinishedRow(row) {
+    innerHTMLFinishedRow(row,index) {
         const html = `
         <tr>
                             <td>${row.nomeFundo.toUpperCase()}</td>
                             <td>${row.numCotas}</td>
                             <td>${Utils.formatCurrency(row.cotacao)}</td>
                             <td>${Utils.formatCurrency(row.ultimoRendimento)}</td>
-                            <td><img src="./Images/editIcon.png" alt="Editar Fundo"></td>
+                            <td><img src="./Images/deleteIcon.png" alt="Editar Fundo" onclick="Row.remove(${index})"></td>
                         </tr>
-        `
-        return html
-    },
-
-    innerHTMLRow() {
-        const html = `
-        <form action="" onsubmit="Form.submit(event)">
-        <tr>
-            <td><input id="nomeFundo"        type="text"       placeholder="NOME"></td>
-            <td><input id="numCotas"         type="number"     placeholder="50"      step= "1"></td>
-            <td><input id="cotacao"          type="number"     placeholder="10,99"   step= "0.01"></td>
-            <td><input id="ultimoRendimento" type="number"     placeholder="0,12"    step= "0.01"></td>
-            <div id="salvarDeletar">
-                <td id="opcoesSalvarDeletar">
-                    <button type="submit"><img src="./Images/saveIcon.png" alt="Salvar Alterações"></button>
-                    <img onclick="DOM.deleteRow(this)" src="./Images/deleteIcon.png" alt="Deletar fundo">
-                </td>
-            </div>
-        </tr>
-         </form>
         `
         return html
     },
@@ -77,10 +69,16 @@ const DOM = {
         document
             .getElementById('rendimentoDoMes')
             .innerHTML = Utils.formatCurrency(Row.rendimentoTotal())
-        if (Row.total > 0){
+        if (Row.total() > 0){
+        value = Row.rendimentoTotal()/Row.total()
+        document
+            .getElementById('dividendYield')
+            .innerHTML = Utils.formatPercentage(value)
+        }
+        else{
             document
             .getElementById('dividendYield')
-            .innerHTML = `${(Row.rendimentoTotal() / Row.total() * 100).toFixed(2).toString().replace(".",",")} %`
+            .innerHTML = "0,00%"
         }
     },
 
@@ -162,6 +160,12 @@ const Utils = {
         })
 
        return value
+    },
+
+    formatPercentage(value) {
+        num = `${Number(value*100).toFixed(2)}%`;
+
+        return num
     }
 }
 
@@ -220,6 +224,7 @@ const Form = {
             const row = Form.formatValues()
             Row.add(row)
             Form.clearFields()
+            Modal.closeModal()
         } catch (error) {
             alert(error.message)
         }
