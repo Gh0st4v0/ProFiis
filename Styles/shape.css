@@ -1,0 +1,460 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    display: flex;
+    align-self: center;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.modal.inactive{
+    opacity: 0;
+    display: hidden;
+    width: 0;
+    height: 0;
+    visibility:hidden;
+}
+
+.modal{
+    z-index: 10;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -10%;
+}
+
+.modalContainer{
+    height: 400px;
+    width: 600px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modalContainer form{
+    width: 540px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.modalContainer input{
+    padding: 1rem;
+    margin: .5rem;
+}
+
+#salvarDeletar{
+    display: flex;
+    width: 540px;
+    justify-content: space-between;
+    padding-top: 1rem;
+}
+
+#salvarDeletar *{
+    width: 216px;
+    margin: .5rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+#salvarDeletar *:hover{
+    cursor: pointer;
+}
+/*Modal Simula*/
+.modalSimula.inactive{
+    opacity: 0;
+    display: hidden;
+    width: 0;
+    height: 0;
+    visibility:hidden;
+}
+
+.modalSimula{
+    z-index: 10;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -10%;
+}
+
+.modalSimulaContainer{
+    height: 500px;
+    width: 600px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modalSimulaContainer .items{
+    width: 540px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.modalSimulaContainer #simulaOpcoes{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    margin: .5rem;
+    border: solid 2px;
+    border-radius: 1rem;
+}
+
+#simulaSalvarDeletar{
+    display: flex;
+    width: 540px;
+    justify-content: space-between;
+    padding-top: 1rem;
+}
+
+#simulaSalvarDeletar *{
+    width: 216px;
+    margin: .5rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+#simulaSalvarDeletar *:hover{
+    cursor: pointer;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    width: 911px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+}
+
+header img{
+    height: 35px;
+    width: 35px;
+}
+
+header img:hover{
+    transition: height .2s;
+    transition: width .2s;
+
+    height: 40px;
+    width: 40px;
+}
+
+#filtros img{
+    cursor: pointer;
+}
+
+button{
+    border: none;
+    background-color: inherit;
+}
+
+button img{
+    width: 30px;
+    height: 30px;
+}
+
+
+button:hover{
+    cursor: pointer;
+}
+
+#title{
+    display: flex;
+    text-align: center;
+    align-items:center;
+    justify-content:space-evenly;
+    flex-direction: column;
+    width: 300px;
+}
+
+#upperOptions{
+    display: flex;
+    align-items: end;
+    width: 150px;
+    justify-content: space-evenly;
+}
+
+#upperOptions img{
+    cursor: pointer;
+}
+
+#bottomPart{
+    display: flex;
+    width: 911px;
+    height: 500px;
+    justify-content: space-between;
+}
+
+#title h3{
+    font-size: xxx-large;
+    font-weight: 600;
+    font-style: italic;
+    line-height: 0;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+aside > *{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    border-radius: 2rem;
+    border-width: 2px;
+}
+
+aside > * h1{
+    font-size: medium;
+    font-weight: 500;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+}
+aside > * h2{
+    padding-bottom: 2.4rem;
+    font-size: xx-large;
+}
+
+aside{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 212px;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    border-style: solid;
+    border-width: 2px;
+    width: 665px;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+#fundosImobiliarios{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-style: solid;
+    border-width: 0 0 2px 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+img{
+    width: 50px;
+    height: 50px;
+}
+
+#tableFiis{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    overflow-y:scroll;
+    overflow-x: hidden;
+}
+
+table{
+    width: 650px;
+    border-spacing: 0 0.5rem;
+}
+
+table thead th {
+    background-color: none;
+    font-weight: normal;
+    padding: 1rem 2rem;
+    text-align: left;
+}
+
+table tbody td {
+    padding: 1rem 2rem;
+}
+
+tbody tr{
+    opacity: 0.7;
+}
+
+tbody tr:hover{
+    opacity: 1;
+}
+
+#opcoesSalvarDeletar{
+    display: flex;
+}
+
+td img{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+table thead tr th{
+    font-weight: bold;
+}
+
+table thead tr th:first-child,
+table tbody tr td:first-child {
+    border-radius: 1rem 0 0 1rem;
+}
+
+table thead tr th:last-child,
+table tbody tr td:last-child {
+    border-radius: 0 1rem 1rem 0;
+    justify-content: center;
+}
+
+/*simulação dos fiis*/
+footer{
+    margin-top: 3rem;
+    width: 911px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border: solid 2px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+#footerTitle{
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+    font-size: x-large;
+    font-weight: 800;
+    border-bottom: solid 2px;
+    
+}
+
+.simulaForm{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.simulaForm:last-child{
+    margin-bottom: 2rem;
+}
+
+.inputs{
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.inputs *{
+    text-align: center;
+    width: 250px;
+    height: 50px;
+    background-color: inherit;
+    border-color: inherit;
+    border: solid 2px;
+    border-radius: 1rem;
+}
+
+.inputs button:hover{
+    transition: font-size .2s;
+    font-size: 16px;
+}
+
+.simulaResult{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+}
+
+@media screen and (max-width: 911px){
+
+    header{
+        width: 80%;
+        margin-bottom: 1rem;
+    }
+
+    #bottomPart{
+        flex-direction: column;
+        align-items: center;
+        width: 80%;
+    }
+
+    aside{
+        width: 100%;
+    }
+
+    aside *{
+        margin-bottom: 1rem;
+    }
+
+    aside > * h1{
+        padding-top: .6rem;
+        padding-bottom: .6rem;
+    }
+    aside > * h2{
+        padding-bottom: 1.2rem;
+    }
+
+    main{
+        width: 100%;
+        border-radius: 2rem 2rem 0 0;
+        z-index: 2;
+        margin-bottom: 1rem;
+    }
+
+    #fundosTitulo{
+        font-size: small;
+    }
+
+    #tableFiis{
+        overflow: scroll;
+    }
+
+    table thead tr th:first-child,
+    table tbody tr td:first-child {
+        border-radius: 0;
+    }
+
+    table thead tr th:last-child,
+    table tbody tr td:last-child {
+        border-radius: 0;
+    }
+
+    .modalContainer{
+        width: 70%;
+    }
+
+    .modalContainer form{
+        width: 85%;
+    }
+
+    .modalContainer #salvarDeletar{
+        width:100%;
+    }
+
+    .modalContainer #salvarDeletar *{
+        width: 40%;
+    }
+
+
+}
+
