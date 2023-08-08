@@ -28,7 +28,7 @@ body{
     display:flex;
     flex-direction: column;
     align-items: center;
-    margin-top: -10%;
+    justify-content: center;
 }
 
 .modalContainer{
@@ -85,7 +85,7 @@ body{
     display:flex;
     flex-direction: column;
     align-items: center;
-    margin-top: -10%;
+    justify-content: center;
 }
 
 .modalSimulaContainer{
